@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const company = {
+            firstname: "akram",
+            lastname: "shaikh",
+            email: "shaikhakram5690@gmail.com",
+           fullname: function () {
+                return this.firstname + " " + this.lastname;
+            }
+        };        
+        
+        for (const key in company) {
+            if (typeof company[key] !== 'function') {
+                document.write(`${key} : ${company[key]}<br>`);
+            }
+        }
+        
+        document.write(company.fullname());
+    </script>
+</body>
+
+</html>

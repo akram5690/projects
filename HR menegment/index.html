@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,4 +142,149 @@
     <script src="script.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR menagement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="contener">
+        <header id="header">
+            <div class="head">
+                <img src="Untitled-3.png" alt="error">
+                <ul class="unorder">
+                    <li class="list"><a href="#header">Dasboard</a></li>
+                    <li class="list"><a href="#employee-section">Employee management</a></li>
+                    <li class="list"><a href="#Attendence">Attendence</a></li>
+                    <li class="list"><a href="#LeaveRequests">Leave Requests</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="hedding">
+            <h2 class="heading">HR Management System</h2>
+            <p>
+                Efficiently Manage Your Workforce
+            </p>
+        </div>
+
+        <section id="employee-section">
+            <h2>Employee Management</h2>
+            <div class="em-cont">
+                <label>Employee name:
+                    <input type="text" name="name" id="inp">
+                </label>
+                <label>Role:
+                    <select id="eselect">
+                        <option value="Maneger">Maneger</option>
+                        <option value="FrontEnd Devloper">FrontEnd Devloper</option>
+                        <option value="BackEnd Devloper">BackEnd Devloper</option>
+                        <option value="Designer">Designer</option>
+                    </select>
+                </label>
+            </div>
+            <button id="btn">Add employee</button>
+            <table id="em-name">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Role</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="Attendence">
+            <h2>Attendance Sheet</h2>
+            <p>Track employee attendance and generate reports.</p>
+
+            <div class="atendence-cont">
+                <label>Employee Name:
+                    <input type="text" id="employeeN">
+                </label>
+                <label>Date:
+                    <input type="date" id="date">
+                </label>
+                <label>Status:
+                    <select id="status">
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                    </select>
+                </label>
+            </div>
+
+            <button id="btn2">Add attendance</button>
+
+            <table id="st-table">
+                <thead>
+                    <tr>
+                        <td>Employee Name</td>
+                        <td>Date</td>
+                        <td>Status</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody2"></tbody>
+            </table>
+        </section>
+
+        <section id="LeaveRequests">
+            <h2>Leave Requests</h2>
+            <p>Manage employee leave requests and approvals.</p>
+
+            <div class="leave-cont">
+                <label>Employee Name:
+                    <input type="text" id="leave-name">
+                </label>
+                <label>Leave Type:
+                    <select id="leaveType">
+                        <option value="Sick Leave">Sick Leave</option>
+                        <option value="Casual Leave">Casual Leave</option>
+                        <option value="personal Leave">personal Leave</option>
+                    </select>
+                </label>
+                <label>Start Date:
+                    <input type="date" id="sdate">
+                </label>
+                <label>End Date:
+                    <input type="date" id="edate">
+                </label>
+                <label>Reason:
+                    <textarea id="reason"></textarea>
+                </label>
+            </div>
+            <button id="btn3">Add Leave</button>
+
+            <table id="leave-table">
+                <thead>
+                    <tr>
+                        <td>Emplpyee Name</td>
+                        <td>Leave type</td>
+                        <td>Start Date</td>
+                        <td>End Date</td>
+                        <td>Reason</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody3"></tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+>>>>>>> d5ddd2a (add file)
 </html>

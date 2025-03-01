@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 *{
     margin: 0;
@@ -135,3 +136,365 @@ a{
     flex: 0 0 100%;
 }
 
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// ================= Mixins ==================
+@mixin flex-center($justify: center, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin transition($property: all, $duration: 0.3s, $ease: ease-in-out) {
+    transition: $property $duration $ease;
+}
+
+@mixin hover-underline {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: black;
+        left: 0;
+        bottom: 0;
+        @include transition(width, 0.3s, ease-in);
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+// ==============commen==================
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.hamburger-icon{
+    display: none;
+
+}
+
+// ======================hero section===============
+
+#main {
+    background-image: linear-gradient(rgba(228, 157, 194, 0.1) 10%, rgba(191, 217, 254, 0.01) 30%, rgb(255, 255, 255) 100%);
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    @include flex-center(space-between, center);
+    padding: 0 50px;
+    position: relative;
+    z-index: 100;
+
+
+    .logo img {
+        margin: 0 20px;
+    }
+
+
+    .nav-links {
+        @include flex-center(null, null);
+        gap: 30px;
+    }
+
+
+    li {
+        position: relative;
+        padding: 15px;
+
+
+        a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            @include hover-underline;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+
+// ====================== Dropdown Menu ======================
+.dropdown {
+    position: relative;
+
+
+    .drop-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        list-style: none;
+        padding: 10px 0;
+        min-width: 200px;
+        transform: translateY(-50px);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(all, 0.5s);
+    }
+
+
+    li {
+        padding: 10px;
+        white-space: nowrap;
+
+
+        a {
+            color: black;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+
+
+
+            &:hover {
+                background: lightgray;
+            }
+        }
+    }
+}
+
+
+// ==================== Show dropdown on hover =====================
+.dropdown:hover .drop-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+// =============== Search bar ================
+.src-inp {
+    @include flex-center(null, center);
+    gap: 20px;
+
+    .inp-src {
+        position: absolute;
+        left: 22%;
+        border-radius: 10px;
+        width: 0%;
+        border: none;
+        transform: translateX(1120px);
+        transition: all 0.3s ease-in-out ;
+        
+    }
+    .src1{
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.534);
+        transform: translateX(0px);
+       width: 70%;
+    }
+
+    i {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+// ======================poster===============
+
+.poster {
+    @include flex-center(space-around, center);
+
+    .poster-content {
+        width: 40%;
+
+        .para {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .hedding {
+            h1 {
+                font-size: 5.5rem;
+            }
+        }
+
+        i {
+            font-size: 2rem;
+            margin-top: 25px;
+        }
+    }
+}
+
+
+
+// ================poster-img===============
+.poster-img {
+    width: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+// ===============innovation==============
+
+.innovation {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 20px 0;
+
+    ul {
+        display: flex;
+        gap: 100px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        animation: scrollText 10s linear infinite;
+        width: max-content;
+
+        li {
+            list-style: disc;
+        }
+    }
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+// ===================section m-content================
+
+.compound {
+    margin: auto;
+    width: 80%;
+    margin-top: 150px;
+    @include flex-center(space-evenly, null);
+    padding: 50px 0;
+
+    div {
+        width: 20%;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .second-img {
+            width: 170px;
+
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            padding: 15px 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 25px;
+        }
+
+    }
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    opacity: 0.5;
+    border: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+// ====================laboratory service===================
+.laboratory-sevrice {
+    margin: 30px 0;
+    padding: 20px;
+
+    .laboratory-sevrice-content {
+        margin: 20px 40px;
+        line-height: 30px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .lab-img {
+        @include flex-center(center, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        text-align: center;
+
+        div {
+            @include flex-center(center, center);
+            flex-direction: column;
+
+        }
+
+        .img {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 25px;
+            box-shadow: 0px 3px 15px 1px rgba(0, 0, 0, 0.4);
+            margin: 15px 0;
+            transition: transform 0.2s ease-in-out;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                object-fit: cover;
+                @include transition(transform, 0.3s);
+            }
+
+            &:hover img {
+                transform: scale(1.1);
+            }
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+    }
+
+}
+
+
+
+@import "media";
+>>>>>>> d5ddd2a (add file)

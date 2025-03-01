@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        #contener {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        #contener div {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        #contener div:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contener"></div>
+        
+    <script>
+        let car = [{
+            brand: "hundai",
+            img: "https://imgd.aeplcdn.com/664x374/n/cw/ec/121943/verna-exterior-right-front-three-quarter-101.jpeg?isig=0&q=80",
+            model: "verna",
+            dec: "The Verna gets impressive modern styling, a long feature list with ADAS functions, and a five-star safety rating.",
+            color: "gray",
+            price: "13,50,000",
+        },
+
+        {
+            brand: "BMW",
+            img: "https://imgd.aeplcdn.com/664x374/n/cw/ec/48034/2-series-gran-coupe-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80",
+            model: "BMW 2 Series Gran Coupe",
+            dec: "The price of BMW 2 Series Gran Coupe, a 5 seater Coupe, ranges from Rs. 43.90 - 46.90 Lakh. It is available in 5 variants,",
+            color: "Red",
+            price: "43,70,000",
+
+        },
+        
+    ]
+
+        let contener = document.getElementById("contener");
+        for (const propertis of car) {
+            contener.innerHTML +=`
+            <div>
+                <h1>${propertis.brand}</h1>
+                <img src="${propertis.img}" alt="error">
+                <h2>${propertis.model}</h2>
+                <p>${propertis.dec}</p>
+                <p>${propertis.color}</p>
+                <span><sup>&#8377;</sup>${propertis.price}</span>
+                <button>view item</button>
+                </div>
+            `                        
+        }
+    </script>
+</body>
+
+</html>

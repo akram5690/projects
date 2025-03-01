@@ -1,0 +1,886 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================header section=========== */
+
+
+#header {
+
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://c.wallhere.com/photos/19/6b/1920x1200_px_Blonde_dress_hair_heels_Hill_legs_Lying_On_Back-636217.jpg!d);
+    opacity: 0.8;
+    z-index: -2;
+}
+
+#header::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.head {
+    width: 100%;
+    height: 100px;
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 10px;
+    font-size: 2.5rem;
+}
+
+.logo img {
+    width: 180px;
+}
+
+.undorder {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.undorder .list {
+    list-style: none;
+}
+
+.undorder .list a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.undorder .list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 10%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.undorder .list a:hover::after {
+    width: 100%;
+
+}
+
+.icon {
+    position: relative;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.icon i {
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.icon .src {
+    position: relative;
+    bottom: 2px;
+    width: 0px;
+    /* height: 0px; */
+    border: none;
+    border-radius: 15px;
+    transition: width 0.3s ease-in;
+}
+
+.icon .src1 {
+    width: 150px;
+    height: 20px;
+    box-shadow: inset 0.5px 0.5px 3px 1.8px black;
+    padding: 10px 15px;
+}
+
+
+/* ====================mobile-icon=========== */
+.menu-btn {
+    display: none;
+}
+.menu-icon{
+    display: none;
+}
+
+
+/*  ==========================header-title section================ */
+
+.header-title {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-page {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    line-height: 55px;
+}
+
+.title-page p {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.title-page h1 {
+    color: white;
+    font-size: 4rem;
+}
+
+.title-page h4 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.title-page input {
+    cursor: pointer;
+    padding: 15px;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* ============================main content================ */
+
+#main {
+    margin: 80px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main h2 {
+    margin: 70px 0;
+    padding: 15px;
+}
+
+#main .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    padding-left: 85px;
+
+}
+
+.container .mini-cont {
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    line-height: 22px;
+}
+
+.container .mini-cont .img-cont {
+    position: relative;
+    width: 430px;
+    height: 580px;
+    overflow: hidden;
+}
+
+.container .mini-cont .img-cont img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.2s all ease-in;
+}
+
+.container .mini-cont .img-cont img:hover {
+    transform: scale(1.1);
+}
+
+.container .mini-cont .img-cont:hover .btn-cont {
+    transform: translatey(0px);
+    opacity: 1;
+
+}
+
+.container .mini-cont .img-cont:hover .btn-cont .btn {
+    transform: translatey(0px);
+    opacity: 1;
+
+}
+
+.container .mini-cont .img-cont .btn-cont {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 65px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatey(65px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.container .mini-cont .img-cont .btn-cont .btn {
+    cursor: pointer;
+    margin: auto;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    opacity: 0;
+    transform: translatey(15px);
+    transition: 0.5s all ease-in;
+}
+
+.text {
+    line-height: 25px;
+    width: 87%;
+    margin: 0 10px;
+    text-align: center;
+
+}
+
+.text h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.text p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.dot i {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.dot i:hover {
+    text-shadow: 1px 1px 7px rgb(73, 73, 73);
+}
+
+/* ================winter section==================== */
+
+.winter-btn {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.winter-btn button {
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: #818181;
+}
+
+.flex {
+    display: flex;
+}
+
+.add {
+    display: none;
+}
+
+.add2 {
+    display: flex;
+}
+
+.sadd {
+    display: none;
+}
+
+.sadd2 {
+    display: flex;
+}
+
+
+
+/* =====================image-contener================ */
+
+
+
+#image-contener {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+
+.model-image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 45px;
+    margin: 15px;
+}
+
+
+
+
+.cover-img {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 30px;
+}
+
+.cover-img:hover .cover-text {
+    transform: translate(0);
+    opacity: 1;
+}
+
+
+.cover-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+    height: 440px;
+    background-color: rgba(228, 227, 247, 0.87);
+    transform: translate(-460px);
+    padding: 25px;
+    opacity: 0;
+    transition: all 0.7s;
+    z-index: -1;
+}
+
+.cover-text h1 {
+    margin: 20px 0px;
+}
+
+
+
+.cover-img .text2 {
+    transform: translate(460px);
+}
+
+.cover-img img {
+    /* position: absolute; */
+    width: 700px;
+    height: 440px;
+}
+
+/* =====================section footer============== */
+
+#footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 100px;
+    background-color: rgba(2, 2, 2, 0.541);
+}
+
+.footer-contener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    flex-direction: column;
+    text-align: center;
+    line-height: 35px;
+}
+
+.address h5 {
+    color: rgb(219, 216, 216);
+    font-size: 1.4rem;
+}
+
+.address h5 span {
+    color: white;
+    text-transform: uppercase;
+}
+
+.address p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.footer-icon i {
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+.footer-icon i:hover {
+    text-shadow: 3px 0px 3px rgb(255, 163, 42);
+}
+
+
+
+
+
+/* =======================midea quary============= */
+
+@media only screen and (max-width: 1900px) {
+    .container .mini-cont .img-cont {
+        width: 330px;
+        height: 450px;
+    }
+
+    @media only screen and (max-width: 1500px) {
+        .container .mini-cont .img-cont {
+            width: 300px;
+            height: 430px;
+        }
+
+        @media only screen and (max-width: 1300px) {
+            #main .container {
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            .container .mini-cont {
+                padding-bottom: 20px;
+            }
+
+            .cover-text {
+
+                width: 450px;
+                height: 382px;
+
+            }
+
+            .cover-img img {
+                /* position: absolute; */
+                width: 570px;
+                height: 385px;
+            }
+
+            @media only screen and (max-width: 1165px) {
+                .undorder .list {
+                    padding: 15px;
+                }
+
+                .undorder .list a {
+                    font-size: 1rem;
+
+                }
+
+
+
+                .cover-text {
+
+                    width: 325px;
+                    height: 320px;
+
+                }
+
+                .cover-img img {
+
+                    width: 454px;
+                    height: 320px;
+                }
+
+                @media only screen and (max-width: 960px) {
+
+                    .container .mini-cont .img-cont {
+                        width: 230px;
+                        height: 370px;
+                    }
+
+
+                    .cover-text {
+
+                        width: 320px;
+                        height: 310px;
+
+                    }
+
+                    .cover-img img {
+
+                        width: 445px;
+                        height: 310px;
+                    }
+
+                    @media only screen and (max-width: 910px) {
+                        #main .container {
+                            grid-template-columns: repeat(2, 1fr);
+
+                        }
+
+
+
+                        .cover-text {
+
+                            width: 280px;
+                            height: 255px;
+
+                        }
+
+                        .cover-img img {
+
+                            width: 360px;
+                            height: 255px;
+                        }
+
+                        @media only screen and (max-width: 790px) {
+                            .logo img {
+                                width: 130px;
+                            }
+
+                            .icon {
+                                display: flex;
+                                justify-content: flex-end;
+
+                            }
+
+                            .icon i {
+                                font-size: 1rem;
+
+                            }
+
+                            /* ========================mobile menu=========== */
+
+                            .undorder {
+                                position: absolute;
+                                display: flex;
+                                flex-direction: column;
+                                width: 100%;
+                                height: 100vh;
+                                background-color: rgb(77, 76, 76);
+                                top: 0;
+                                transform: translate(-775px);
+                                transition: transform 0.7s;
+                            }
+
+                            .undorder2 {
+                                transform: translate(0px);
+                            }
+
+                            .unorder .list {
+                                line-height: 0;
+                            }
+
+                            .undorder .list a {
+                                font-size: 1.8rem;
+                            }
+                            .icon{
+                                right: -5%;
+                            }
+
+
+                            
+
+                            .menu-btn {
+                                display: none;
+                            }
+                            .menu-icon{
+                                display: block;
+                            }
+
+                            .menu-icon .mobile-nav {
+                                cursor: pointer;
+                                display: block;
+                                width: 20px;
+                                height: 2px;
+                                background-color: white;
+                                position: relative;
+                                margin-left: 10px;
+                            }
+
+                            .menu-icon .mobile-nav::after,
+                            .menu-icon .mobile-nav::before {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 2px;
+                                /* top: 15px; */
+                                background-color: white;
+                                transition: all 0.2s;
+                            }
+
+                            .menu-icon .mobile-nav::before {
+                                top: -6px;
+                            }
+
+                            .menu-icon .mobile-nav::after {
+                                bottom: -6px;
+                            }
+
+                            .menu-btn:checked~.menu-icon .mobile-nav {
+                                background: transparent;
+                            }
+
+                            .menu-btn:checked~.menu-icon .mobile-nav::after {
+                                top: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            .menu-btn:checked~.menu-icon .mobile-nav::before {
+                                top: 0;
+                                transform: rotate(-45deg);
+                            }
+
+                            /* ==================close============== */
+
+                            .title-page p {
+                                font-size: 1.6rem;
+                            }
+
+                            .title-page h1 {
+                                font-size: 3.5rem;
+                            }
+
+                            .title-page h4 {
+                                font-size: 1.6rem;
+                            }
+
+                            .title-page input {
+                                font-size: 1rem;
+                            }
+
+
+
+
+                            .cover-text {
+                                width: 500px;
+                                height: 328px;
+                                transform: translate(0);
+                                z-index: 1;
+                            }
+
+                            .cover-img .text2 {
+                                transform: translate(0);
+                            }
+
+                            .cover-img img {
+                                position: absolute;
+                                width: 500px;
+                                height: 327px;
+                                left: 54px;
+                                z-index: 0;
+                            }
+
+                            @media only screen and (max-width: 685px) {
+
+
+
+
+                                .title-page p {
+                                    font-size: 1.4rem;
+                                }
+
+                                .title-page h1 {
+                                    font-size: 3rem;
+                                }
+
+                                .title-page h4 {
+                                    font-size: 1.4rem;
+                                }
+
+                                .title-page input {
+                                    font-size: 0.9rem;
+                                }
+
+
+
+                                .cover-text {
+                                    width: 500px;
+                                    height: 328px;
+                                    transform: translate(0);
+                                    z-index: 1;
+                                }
+
+                                .cover-img .text2 {
+                                    transform: translate(0);
+                                }
+
+                                .cover-img img {
+                                    position: absolute;
+                                    width: 500px;
+                                    height: 327px;
+                                    left: 54px;
+                                    z-index: 0;
+                                }
+
+                                @media only screen and (max-width: 610px) {
+
+                                    .title-page p {
+                                        font-size: 1.2rem;
+                                    }
+
+                                    .title-page h1 {
+                                        font-size: 2.5rem;
+                                    }
+
+                                    .title-page h4 {
+                                        font-size: 1.1rem;
+                                    }
+
+                                    .title-page input {
+                                        font-size: 0.9rem;
+                                    }
+
+                                    .container .mini-cont .img-cont {
+                                        width: 190px;
+                                        height: 330px;
+                                    }
+
+                                    .cover-text {
+                                        width: 430px;
+                                        height: 300px;
+                                    }
+
+                                    .cover-img img {
+                                        width: 430px;
+                                        height: 300px;
+                                    }
+
+                                    @media only screen and (max-width: 610px) {
+
+                                        .title-page p {
+                                            font-size: 1rem;
+                                        }
+
+                                        .title-page h1 {
+                                            font-size: 2.3rem;
+                                        }
+
+                                        .title-page h4 {
+                                            font-size: 1rem;
+                                        }
+
+                                        .title-page input {
+                                            font-size: 0.8rem;
+                                            padding: 10px;
+                                        }
+
+                                        .container .mini-cont .img-cont {
+                                            width: 160px;
+                                            height: 270px;
+                                        }
+
+                                        .cover-text {
+                                            width: 380px;
+                                            height: 270px;
+                                        }
+
+                                        .cover-img img {
+                                            width: 380px;
+                                            height: 270px;
+                                        }
+
+                                        @media only screen and (max-width: 490px) {
+
+                                            .title-page p {
+                                                font-size: 1rem;
+                                            }
+
+                                            .title-page h1 {
+                                                font-size: 2.3rem;
+                                            }
+
+                                            .title-page h4 {
+                                                font-size: 1rem;
+                                            }
+
+                                            .title-page input {
+                                                font-size: 0.8rem;
+                                                padding: 10px;
+                                            }
+
+                                            #main .container {
+                                                grid-template-columns: repeat(1, 1fr);
+
+                                            }
+
+                                            .container .mini-cont .img-cont {
+                                                width: 220px;
+                                                height: 330px;
+                                            }
+
+                                            .cover-text {
+                                                width: 350px;
+                                                height: 260px;
+                                            }
+
+                                            .cover-img img {
+                                                width: 350px;
+                                                height: 260px;
+                                            }
+
+                                            @media only screen and (max-width: 460px) {
+
+                                                .cover-text {
+                                                    width: 290px;
+                                                    height: 180px;
+                                                }
+
+                                                .cover-text h1 {
+                                                    font-size: 0.9rem;
+                                                }
+
+                                                .cover-text p {
+                                                    font-size: 0.8rem;
+                                                }
+
+                                                .cover-img img {
+                                                    width: 290px;
+                                                    height: 180px;
+                                                }
+
+                                                @media only screen and (max-width: 460px) {
+
+
+                                                    .cover-text {
+                                                        width: 250px;
+                                                        height: 160px;
+                                                    }
+
+                                                    .cover-img img {
+                                                        width: 250px;
+                                                        height: 160px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
