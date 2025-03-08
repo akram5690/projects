@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contener">
+        <div class="game-cont">
+            <div class="quis-cont">
+                <h3>You will get 80 points for the correct answer</h3>
+                <div id="first" class="q-box"></div><span style="color: white; font-size: 2rem; margin: 0 5px; font-weight: bold;">x</span>                
+                <div id="second" class="q-box"></div> <span style="color: white; font-size: 2rem; margin: 0 5px; font-weight: bold;">=</span>              
+                <div id="equal" class="q-box"></div>  
+                <input type="text" id="equal2" class="q-box">
+                <button id="sbtn">submit</button>              
+            </div>
+
+            <div class="game-headerbar">
+                <button id="Reset">Reset</button>
+                <div class="s-box">
+                    <h2>Hit</h2>
+                    <div id="hit" class="box">5</div>
+                </div>
+                <div class="s-box">
+                    <h2>Timet</h2>
+                    <div id="timer" class="box"></div>
+                </div>
+                <div class="s-box">
+                    <h2>Score</h2>
+                    <div id="Score" class="box"></div>
+                </div>
+            </div>
+
+            <div id="game-content" class="gameOver">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
